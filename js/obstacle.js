@@ -4,15 +4,15 @@ class Obstacle extends Component {
       gameScreen,
       Math.floor(Math.random() * 300 + 70),
       0,
-      100,
-      150,
-      "./images/redCar.png"
+      80,
+      130,
+      "./images/Pokeball.png"
     );
   }
 
   move() {
     // Move the obstacle down by 3px
-    this.top += 3;
+    this.top += 4; // if higher like 4 it moves faster
     // Update the obstacle's position on the screen
     this.updatePosition();
   }

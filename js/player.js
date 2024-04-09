@@ -12,23 +12,23 @@ class Player extends Component {
 
     // Ensure the player's car stays within the game screen
     // handles left hand side
-    if (this.left < 10) {
-      this.left = 10;
+    if (this.left < 30) {
+      this.left = 30;
     }
 
     // handles top side
-    if (this.top < 10) {
-      this.top = 10;
+    if (this.top < 50) {
+      this.top = 50;
     }
 
     // handles right hand side
-    if (this.left > this.gameScreen.offsetWidth - this.width - 10) {
-      this.left = this.gameScreen.offsetWidth - this.width - 10;
+    if (this.left > this.gameScreen.offsetWidth - this.width - 50) {
+      this.left = this.gameScreen.offsetWidth - this.width - 50;
     }
 
     // handles bottom side
-    if (this.top > this.gameScreen.offsetHeight - this.height - 10) {
-      this.top = this.gameScreen.offsetHeight - this.height - 10;
+    if (this.top > this.gameScreen.offsetHeight - this.height - 50) {
+      this.top = this.gameScreen.offsetHeight - this.height - 50;
     }
 
     // Update the player's car position on the screen

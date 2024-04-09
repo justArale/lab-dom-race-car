@@ -4,13 +4,14 @@ class Game {
     this.startScreen = document.getElementById("game-intro");
     this.gameScreen = document.getElementById("game-screen");
     this.gameEndScreen = document.getElementById("game-end");
+
     this.player = new Player(
       this.gameScreen,
       200,
       500,
       100,
-      150,
-      "./images/car.png"
+      130,
+      "./images/Pikachu.png"
     );
     this.height = 600;
     this.width = 500;
@@ -63,12 +64,16 @@ class Game {
         this.obstacles.splice(i, 1);
         // Reduce player's lives by 1
         this.lives--;
+        const livesContainer = document.getElementById("lives");
+        livesContainer.textContent = this.lives;
         // Update the counter variable to account for the removed obstacle
         i--;
       } // If the obstacle is off the screen (at the bottom)
       else if (obstacle.top > this.height) {
         // Increase the score by 1
         this.score++;
+        const scoreContainer = document.getElementById("score");
+        scoreContainer.textContent = this.score;
         // Remove the obstacle from the DOM
         obstacle.element.remove();
         // Remove obstacle object from the array
@@ -106,3 +111,11 @@ class Game {
 
 // if (something) do something else do something else
 // somethinmg ? here if it is true : here if it is false
+
+/*  
+scoreContainer = document.getElementById("score");
+scoreContainer.innerHTML = this.score; 
+        
+livesContainer = document.getElementById("lives");
+livesContainer.textContent = this.lives;       
+*/
